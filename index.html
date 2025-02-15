@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D7E2E8;
+    height: 90px;
+    padding: 15px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    list-style: none;
+    z-index: 100;
+}
+
+.menu-content li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-content li:hover {
+    background-color: #f0f0f0;
+}
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+        background:  #D7E2E8;
+        
+   
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    font-size: 19px;
+    font-weight: bold;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+        font-family: "Poppins", serif;
+font-weight: 100;
+font-style: normal;
+background:  #D7E2E8;
+}
+.nav-left a:hover {
+    color: #007bff;
+}
+
+.nav-center p {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background:  #D7E2E8
+        @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital@1&family=Dancing+Script:wght@400..700&family=Poppins&display=swap');
+        font-family: "Poppins", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 35px;
+}
+
+.nav-right a i {
+    font-size: 20px;
+}
+body{
+    background: linear-gradient(90deg,#fff7ad,#ffa9f9);
+    
+}
+.dbody{
+    @import url('https://fonts.googleapis.com/css2?family =Dancing+Script:wght@400..700&display=swap');
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+.sample-text {
+    margin-top: 50px; /* Adds gap between navbar and text */
+    text-align: center;
+}
+.sample-text p {
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 24px;
+    color: #333;
+}
+.image-container{
+  margin: 50px auto;
+    width: 80%;
+    background:#fffeee;
+    opacity: 100%;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* Styling for Images */
+.image-container img {
+    width: 200px; /* Set fixed size for images */
+    height: auto;
+    border: 5px solid #ffffff; /* Frame effect */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.image-container img:hover {
+    transform: scale(1.1);
+   
+}
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for Images */
+.image-box img {
+    width: 200px;
+    height: auto;
+    border: 5px solid #ccc; /* Frame effect */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Styling for Image Comments */
+.image-box p {
+    
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+font-family: "Open Sans", serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+font-variation-settings:
+  "wdth" 100;
+
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+}
+
+/* Hover effect */
+.image-box img:hover {
+    transform: scale(1.1);
+}
+
+.image-box p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+}
+
+/* Floating Help Button */
+.help-button {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    background:linear-gradient(90deg,#000000,#c89116);
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.help-button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background:linear-gradient(90deg,#5de0e6,#004aad);
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <section id="header">
+        <nav>
+            <div class="nav-left">
+                <a class="left" href="home.html">Home</a>
+                <a class="left" href="shop.html">Shop</a>
+                <a class="left" href="about.html">About</a>
+                <a class="left" href="contact.html">Contact</a>
+            </div>
+
+            <div class="nav-center">
+                <p>Art2Craft</p>
+            </div>
+
+            <div class="nav-right">
+                <a href="profile.html"><i class="fa-solid fa-user"></i></i></a>
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+
+                <div class="menu" onclick="toggleMenu()">
+                    ☰
+                    <ul class="menu-content" id="menuContent">
+                        <li>Admin</li>
+                        <li>Seller</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section id="body">
+
+        <div class="sample-text">
+            <p>Welcome to Would of Art2Craft, where quality meets excellence.</p>
+        </div>
+        <div class="image-container">
+            <div class="image-row">
+
+                <div class="image-box"><a href="Painting.html"><img
+                            src="https://png.pngtree.com/png-clipart/20240826/original/pngtree-sports-cricket-logo-with-colorful-paint-splashes-vector-png-image_15855907.png"
+                            alt="Painting"></a>
+                        <p><b>Painting</b></p>
+                    </a></div>
+                <div class="image-box"><a href="Drawing.html"><img
+                        src="https://marketplace.canva.com/EAF9_nrLjJA/1/0/1600w/canva-black-and-white-aesthetic-flower-hijab-store-logo-9WOCRq8B41Y.jpg"
+                        alt="Drawing"></a>
+                    <p><b>Drawing</b></p>
+                </div>
+                <div class="image-box"><a href="Sculpting.html"><img
+                        src="https://png.pngtree.com/png-vector/20230831/ourmid/pngtree-neon-blue-circle-banner-neon-circle-png-image_9211744.png"
+                        alt="Sculpting"></a>
+                    <p><b>Sculpting</b></p>
+                </div>
+                <div class="image-box"><a href="PaperCraft.html"><img
+                        src="https://media.istockphoto.com/id/1136569524/vector/bird-in-the-thickets-of-plants.jpg?s=612x612&w=0&k=20&c=LjfOaf7PfVykRsWOrnkAVBPIpxZCQzmXnxlh3G4GhHE="
+                        alt="Paper Craft"></a>
+                    <p><b>Paper Craft</b></p>
+                </div>
+            </div>
+            <div class="image-row">
+                <div class="image-box"><a href="TextileArt.html"><img
+                        src="https://thumbs.dreamstime.com/b/hand-drawn-ginkgo-biloba-plant-as-logo-vector-illustration-botanical-sketch-green-background-hand-drawn-ginkgo-biloba-plant-as-353378592.jpg"
+                        alt="Textile Art"></a>
+                    <p><b>Textile Art</b></p>
+                </div>
+                <div class="image-box"><a href="Pottery&Ceramics.html"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU6bdX9WRo_4QFNt0aCk7T82Xm0bjv60oa1w&s"
+                        alt="Pottery & Ceramics"></a>
+                    <p><b>Pottery & Ceramics</b></p>
+                </div>
+                <div class="image-box"><a href="JewelryMaking.html"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxviADmqHVRhEoJ63A_oG6nuCohlkGo8udQ&s"
+                        alt="Jewelry Making"></a>
+                    <p><b>Jewelry Making </b></p>
+                </div>
+                <div class="image-box"><a href="Recycled Art.html"><img
+                        src="https://imgcdn.stablediffusionweb.com/2024/9/25/25096298-15dc-46ff-8263-c389d249b6eb.jpg"
+                        alt="Recycled Art"></a>
+                    <p><b>Recycled Art</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="help-button">
+            <a href="#"><i class="fa-regular fa-comment"></i></a>
+        </div>
+
+
+
+    </section>
+    <footer>
+        <div class="footer">
+        <p>📍 Address: Arabinda pally , Siliguri, West Bengal,pin-734006</p>
+        <p>📧 Email: Art2Craft@Art.com</p>
+        <p>🔗 <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+        <p>© 2025 The Business. All Rights Reserved.</p>
+    </div>
+    </footer>
+
+</body>
+
+</html>
